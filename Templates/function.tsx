@@ -9,7 +9,7 @@ type PropType= {
 */
 
 // Destructure the props
-const Input = (/* { prop1, prop2 }: PropType */) => {
+const Input = (/* { prop1, prop2 }: PropType */): JSX.Element => {
   return <div className="Input"></div>;
 };
 
