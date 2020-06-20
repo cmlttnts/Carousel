@@ -71,19 +71,31 @@ button {
 
 /* PROJECT SPECIFIC */
 
+html {
+  position: relative;
+  min-height: 100vh;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  & > div {
-    margin-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  .CarouselsCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
-  }
 
-  @include mqs.desktop {
-    flex-direction: row;
+    width: 95%;
+
+    margin-top: 1rem;
+    @include mqs.desktop {
+      flex-direction: row;
+    }
   }
 }
 
