@@ -1,0 +1,16 @@
+$desktopW: 860px;
+
+@mixin desktop {
+  @media only screen and (min-width: #{$desktopW}) {
+    @content;
+  }
+}
+
+/*
+copy paste
+@use '' as mqt
+
+@include mqs.desktop {
+}
+
+*/

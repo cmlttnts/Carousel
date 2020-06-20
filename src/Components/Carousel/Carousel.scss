@@ -1,0 +1,108 @@
+@use "./CarouselVars";
+@use "../../mediaQs" as mqs;
+
+.Carousel {
+  //Colors, Fonts, Borders
+  border: 2px solid rgb(90, 84, 84);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgb(31, 30, 30);
+  //Display
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  //Diamensions
+  max-width: 400px;
+  max-height: 400px;
+
+  min-width: 200px;
+  min-height: 200px;
+  width: 80vw;
+  height: 80vw;
+  //Position
+  position: relative;
+  //Margin, Padding
+  margin: 2rem auto;
+  //Transition, Animation
+
+  img {
+    max-width: 100%;
+  }
+}
+
+$widthP: 20%;
+$bgc: rgba(151, 205, 207, 0);
+$bgc-hov: rgba(151, 205, 207, 0.7);
+$slider-col: rgba(0, 0, 0, 0.3);
+$slider-col-hov: rgb(0, 0, 0, 0.9);
+
+@keyframes mobileArrowAnim {
+  0% {
+    background-color: $bgc;
+    color: $slider-col;
+  }
+  10% {
+    background-color: $bgc-hov;
+    color: $slider-col-hov;
+  }
+
+  20% {
+    background-color: $bgc;
+    color: $slider-col;
+  }
+  100% {
+    background-color: $bgc;
+    color: $slider-col;
+  }
+}
+
+.SliderB {
+  //Colors, Fonts, Borders
+  color: $slider-col;
+  background-color: $bgc;
+  box-shadow: none;
+  //Display
+  display: block;
+  //Diamensions
+  height: 100%;
+  width: $widthP;
+  //Position
+  position: absolute;
+  //Margin, Padding
+  //Transition, Animation
+  animation: mobileArrowAnim 3s infinite;
+
+  @include mqs.desktop {
+    animation: none;
+    transition: all 0.3s ease-out;
+  }
+}
+
+.SliderB:hover {
+  @include mqs.desktop {
+    background-color: $bgc-hov;
+    color: $slider-col-hov;
+  }
+}
+
+.LeftSliderB {
+  //Colors, Fonts, Borders
+  //Display
+  //Diamensions
+  //Position
+  left: 0;
+  //Margin, Padding
+
+  //Transition, Animation
+}
+
+.RightSliderB {
+  //Colors, Fonts, Borders
+  //Display
+  //Diamensions
+  //Position
+  right: 0;
+  //Margin, Padding
+  //Transition, Animation
+}
