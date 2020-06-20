@@ -28,6 +28,72 @@
 
   img {
     max-width: 100%;
+    opacity: 0;
+    position: absolute;
+  }
+
+  .ActiveAtStart {
+    opacity: 1;
+  }
+
+  .ActiveFromLeft {
+    animation: comingFromLeft 0.5s;
+    opacity: 1;
+  }
+  .ActiveFromRight {
+    animation: comingFromRight 0.5s;
+    opacity: 1;
+  }
+  .DisabledFromLeft {
+    animation: goToLeft 0.5s;
+    opacity: 0;
+  }
+  .DisabledFromRight {
+    animation: goToRight 0.5s;
+    opacity: 0;
+  }
+}
+
+@keyframes comingFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes comingFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes goToLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+}
+@keyframes goToRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 1;
   }
 }
 
@@ -64,6 +130,7 @@ $slider-col-hov: rgb(0, 0, 0, 0.9);
   box-shadow: none;
   //Display
   display: block;
+  z-index: 2;
   //Diamensions
   height: 100%;
   width: $widthP;
@@ -87,22 +154,21 @@ $slider-col-hov: rgb(0, 0, 0, 0.9);
 }
 
 .LeftSliderB {
-  //Colors, Fonts, Borders
-  //Display
-  //Diamensions
-  //Position
   left: 0;
-  //Margin, Padding
-
-  //Transition, Animation
 }
 
 .RightSliderB {
-  //Colors, Fonts, Borders
-  //Display
-  //Diamensions
-  //Position
   right: 0;
-  //Margin, Padding
-  //Transition, Animation
+}
+
+.CarouselCounter {
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  background-color: rgba(243, 234, 217, 0.534);
+  padding: 0.2rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }

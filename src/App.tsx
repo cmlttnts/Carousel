@@ -15,14 +15,13 @@ const App = (): JSX.Element => {
 
   return (
     <div className="App">
-      Under Construction ...
       <div className="CarouselsCont">
         <div>
-          <h1>Linear Carousel</h1>
+          <h1>Linear</h1>
           <Carousel images={images} type="linear" />
         </div>
         <div>
-          <h1>Circular Carousel</h1>
+          <h1>Circular</h1>
           <Carousel images={images} type="circular" />
         </div>
       </div>
