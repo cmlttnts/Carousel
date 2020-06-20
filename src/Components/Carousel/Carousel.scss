@@ -99,8 +99,9 @@
 
 $widthP: 20%;
 $bgc: rgba(151, 205, 207, 0);
+$bgc-desktop: rgba(151, 205, 207, 0.2);
 $bgc-hov: rgba(151, 205, 207, 0.7);
-$slider-col: rgba(0, 0, 0, 0.3);
+$slider-col: rgba(0, 0, 0, 0.6);
 $slider-col-hov: rgb(0, 0, 0, 0.9);
 
 @keyframes mobileArrowAnim {
@@ -141,6 +142,7 @@ $slider-col-hov: rgb(0, 0, 0, 0.9);
   animation: mobileArrowAnim 3s infinite;
 
   @include mqs.desktop {
+    background-color: $bgc-desktop;
     animation: none;
     transition: all 0.3s ease-out;
   }
